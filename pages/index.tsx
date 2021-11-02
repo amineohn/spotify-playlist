@@ -5,6 +5,7 @@ import Loading from "../components/Loading";
 import fetcher from "../libs/fetcher";
 import { Example } from "../libs/types";
 import FadeIn from "react-fade-in";
+import Track from "../components/Track";
 const Home: NextPage = () => {
   const { data } = useSWR<Example>(`/api/example`, fetcher);
   return (
@@ -110,6 +111,7 @@ const Home: NextPage = () => {
                 </a>
               </div>
             </div>
+            <Track />
           </div>
         </div>
       </FadeIn>
